@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expens Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <div class="title">Expenses</div>
+    <div class="expenses">
+
+      <div class="descript">
+        <div>Description</div>
+        <div>Category</div>
+        <div>Amount</div>
+        <div>Date</div>
+        <div>Action</div>
+      </div>
+
+      <div class="lists">
+        
+      </div>
+
+      <div class="botto">
+        <div id="total">
+          
+        </div>
+        <button id="openPop">Add Expense</button>
+      </div>
+    </div>
+    
+    <div class="popUp hidden">
+      <div class="title">Add Expense</div>
+
+      <form action="#">
+        <div class="inputBox">
+          <label>Description:</label>
+          <input name="expense"  id="description">
+
+          <label>Amount:</label>
+          <input name="expense"  id="amount" type="number" min="0">
+
+          <label>Category</label>
+            <select name="expense" id="category">
+              <option disabled selected value="undefined">Category</option>
+              <option value="Food">Food</option>
+              <option value="Travel">Travel</option>
+              <option value="Bills">Bills</option>
+            </select>
+
+          <label>Date</label>
+          <input name="expense" type="date"  id="date">
+        
+        </div>
+      </form>
+      <div class="botto">
+        <button id="cancel" type="reset">Cancel</button>
+
+        <div class="errorBox  hidden"></div>
+
+        <button id="addBtn">Add Expense</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

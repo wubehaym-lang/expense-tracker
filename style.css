@@ -1,0 +1,146 @@
+:root{
+  --bg-dark: hsl(0 0% 5%);
+  --bg: hsl(0 0% 10%);
+  --bg-light: hsl(0 0% 15%);
+
+  --prima: hsla(214, 100%, 50%, 0.511);
+  --secon: hsla(214, 100%, 50%, 0.6);
+  --shadow: 2px 2px 6px hsla(0, 0%, 0%, 0.184);
+
+  --text: hsl(0, 0%, 95%);
+  --text-min: hsl(0, 0%, 85%);
+  --text-muted:  hsl(0, 0%, 70%);
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: var(--bg-dark);
+}
+.box{
+  width: max-content;
+  margin: 50px  auto ;
+  display: grid;
+  padding: 15px;
+  gap: 1em;
+  background: var(--bg);
+  border-radius: 5px;
+  position: relative;
+}
+.title{
+  color: var(--text);
+  font-size: 20px;
+  font-weight: bold;
+}
+.expenses{
+  display: grid;
+  gap: .5em;
+}
+.descript, .displaList, .editExpenseBox{
+  display: grid;
+  grid-template-columns: 150px 80px 70px 80px 50px 50px;
+  gap: .7em;
+  padding: 0 5px;
+}
+
+.descript div{
+  font-weight: bold;
+  color: var(--text-min);
+}
+
+.lists{ 
+  background: var(--bg-light);
+  border-radius: 5px;
+  color: var(--text-muted);
+  display: grid;
+  gap: .7em;
+}
+
+.botto{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#total{
+  font-size: 1.2em;
+  color: var(--text);
+}
+
+#openPop, #addBtn{
+  border: none;
+  background: var(--prima);
+  color: #fff;
+  padding: 7px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 92px;
+}
+#openPop:hover, #addBtn:hover{
+  background: var(--secon);
+  box-shadow: var(--shadow);
+  transition: .3s;
+}
+.popUp {
+  position: absolute;
+  width: 95%;
+  min-height: 100px;
+  background: var(--bg-light);
+  left: 2.5%;
+  top: 5%;
+  padding: 15px;
+  display: grid;
+  border-radius: 10px;
+}
+
+.inputBox{
+  display: grid;
+  grid-template-columns: 90px 200px;
+  row-gap: 10px;
+  margin-bottom: 15px;
+}
+
+form label{
+  color: var(--text-min);
+}
+form input, form select{
+  outline: none;
+}
+#cancel{
+  border: none;
+  padding: 5px;
+}
+.errorBox{
+ color: red;
+ margin: auto 0;
+}
+
+.hidden{
+  display: none;
+}
+.editExpenseBox{
+  display: none;
+}
+
+.isEditing .displaList{
+  display: none;
+}
+.isEditing .editExpenseBox{
+  display: grid;
+}
+.errorInput{
+  border: 1px red solid;
+  box-shadow: 0  0 5px 1px red;
+}
+input , select {
+  border-radius: 3px;
+  padding: 2px 2px;
+  border: 1px solid #fff;
+  outline: none;
+}
